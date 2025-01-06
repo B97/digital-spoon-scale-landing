@@ -97,10 +97,11 @@ footer {
 }
 
 .product-image {
-    max-width: 100%; /* Ensure the image is responsive */
+    max-width: 100%; /* Ensure the image doesn’t exceed its container’s width */
     height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+    margin: 20px auto; /* Center the image horizontally */
     border-radius: 10px; /* Optional: Add rounded corners */
-    margin: 20px 0; /* Add spacing around the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
