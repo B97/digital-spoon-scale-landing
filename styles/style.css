@@ -139,12 +139,32 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header, section {
-        padding: 10px; /* Reduce padding on smaller screens */
+    /* Reduce spacing for smaller screens */
+    .image-container {
+        margin: 10px 0;
     }
 
-    .image-container {
-        height: 200px; /* Adjust height for smaller screens */
+    .product-description {
+        margin: 10px 0;
+        padding: 0 5px;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Ensure the image doesn’t take up too much space */
+    .product-image {
+        max-width: 90%; /* Slightly smaller image on mobile */
     }
 }
 
