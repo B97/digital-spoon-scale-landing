@@ -118,18 +118,16 @@ footer {
 }
 
 .image-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 300px; /* Set a fixed height for the container (adjust as needed) */
-    background-color: #f9f9f9; /* Optional: Add a background color */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    margin: 20px 0; /* Add spacing around the container */
+    width: 100%; /* Ensure the container takes up the full width */
+    text-align: center; /* Center the image horizontally */
+    margin: 20px 0; /* Add some spacing */
 }
 
 .product-image {
-    max-width: 100%; /* Ensure the image doesn’t exceed its container’s width */
-    max-height: 100%; /* Ensure the image doesn’t exceed its container’s height */
+    max-width: 80%; /* Increase the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* Center the image horizontally */
     border-radius: 10px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
