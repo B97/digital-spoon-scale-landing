@@ -1,10 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cairo', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-bottom: 60px; /* Add padding to avoid footer overlap */
 }
 
 header {
@@ -64,9 +65,10 @@ footer {
     background-color: #333;
     color: white;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
+    text-align: center;
     width: 100%;
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
 }
 
 .whatsapp-button {
@@ -76,9 +78,12 @@ footer {
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    margin-top: 20px;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    bottom: 80px; /* Adjust this value to avoid overlap with the footer */
+    right: 20px;
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .whatsapp-button:hover {
