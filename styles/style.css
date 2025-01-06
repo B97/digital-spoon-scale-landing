@@ -15,9 +15,10 @@ header {
 }
 
 header, section {
-    max-width: 1200px; /* Adjust this value as needed */
+    max-width: 100%; /* Ensure the container doesn’t exceed the screen width */
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 h1, h2 {
@@ -115,4 +116,14 @@ footer {
 .product-image:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
     transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    header, section {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .product-image {
+        margin: 10px auto; /* Reduce margin on smaller screens */
+    }
 }
