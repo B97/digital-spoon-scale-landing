@@ -67,8 +67,9 @@ footer {
     padding: 10px;
     text-align: center;
     width: 100%;
-    position: relative; /* Change from fixed to relative */
+    position: relative;
     bottom: 0;
+    margin-top: 20px; /* Add margin to avoid overlap */
 }
 
 .whatsapp-button {
