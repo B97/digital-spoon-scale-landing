@@ -16,9 +16,6 @@ header {
 
 /* Center all text vertically (if needed) */
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     box-sizing: border-box; /* Include padding in the height calculation */
 }
@@ -151,4 +148,26 @@ footer {
     .image-container {
         height: 200px; /* Adjust height for smaller screens */
     }
+}
+
+
+/* Style the quantity input */
+#quantity {
+    width: 100px; /* Set a fixed width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Optional: Add hover and focus effects */
+#quantity:hover {
+    border-color: #4CAF50;
+}
+
+#quantity:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
