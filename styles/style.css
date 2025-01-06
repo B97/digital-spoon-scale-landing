@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: 'Cairo', sans-serif;
     background-color: #f4f4f4;
@@ -18,6 +19,7 @@ header {
 section {
     align-items: center; /* Center horizontally */
     box-sizing: border-box; /* Include padding in the height calculation */
+    padding: 20px 0; /* Add vertical padding to sections */
 }
 
 /* Center the footer text */
@@ -26,6 +28,10 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px; /* Add margin to avoid overlap */
 }
 
 header, section {
@@ -37,6 +43,30 @@ header, section {
 
 h1, h2 {
     margin: 0;
+}
+
+/* Increase font sizes */
+h1 {
+    font-size: 36px; /* Larger font size for main title */
+    color: #4CAF50; /* Green color for emphasis */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px; /* Larger font size for section titles */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px; /* Larger font size for subtitles */
+    color: #666;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px; /* Larger font size for paragraphs */
+    line-height: 1.6; /* Improve readability */
 }
 
 #features {
@@ -80,17 +110,6 @@ button {
 
 button:hover {
     background-color: #45a049;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    margin-top: 20px; /* Add margin to avoid overlap */
 }
 
 .whatsapp-button {
@@ -138,37 +157,6 @@ footer {
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    /* Reduce spacing for smaller screens */
-    .image-container {
-        margin: 10px 0;
-    }
-
-    .product-description {
-        margin: 10px 0;
-        padding: 0 5px;
-    }
-
-    /* Adjust font sizes for smaller screens */
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    /* Ensure the image doesn’t take up too much space */
-    .product-image {
-        max-width: 90%; /* Slightly smaller image on mobile */
-    }
-}
-
-
 /* Style the quantity input */
 #quantity {
     width: 100px; /* Set a fixed width */
@@ -188,4 +176,77 @@ footer {
     outline: none;
     border-color: #4CAF50;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Style the COD message */
+.cod-message {
+    font-size: 18px;
+    background-color: #e3f2fd;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #90caf9;
+    margin: 20px 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    /* Reduce spacing for smaller screens */
+    .image-container {
+        margin: 10px 0;
+    }
+
+    .product-description {
+        margin: 10px 0;
+        padding: 0 5px;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    h1 {
+        font-size: 28px; /* Slightly smaller on mobile */
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .cod-message {
+        font-size: 16px;
+    }
+
+    .whatsapp-button {
+        font-size: 16px;
+    }
+
+    /* Ensure the image doesn’t take up too much space */
+    .product-image {
+        max-width: 90%; /* Slightly smaller image on mobile */
+    }
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Add hover effect for buttons */
+button:hover, .whatsapp-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
