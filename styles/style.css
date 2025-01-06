@@ -1,39 +1,171 @@
-document.getElementById('order-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Add padding to avoid footer overlap */
+}
 
-    const phone = document.getElementById('phone').value;
-    const phonePattern = /^\+?\d{10,}$/; // Simple pattern for phone numbers
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
 
-    if (!phonePattern.test(phone)) {
-        alert('يرجى إدخال رقم هاتف صحيح.');
-        return;
+/* Center all text vertically (if needed) */
+section {
+    align-items: center; /* Center horizontally */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+/* Center the footer text */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+header, section {
+    max-width: 100%; /* Ensure the container doesn’t exceed the screen width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+#features {
+    margin: 20px;
+}
+
+#order {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px; /* Add margin to avoid overlap */
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    bottom: 80px; /* Adjust this value to avoid overlap with the footer */
+    right: 20px;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
+}
+
+.image-container {
+    width: 100%; /* Ensure the container takes up the full width */
+    text-align: center; /* Center the image horizontally */
+    margin: 20px 0; /* Add some spacing */
+}
+
+.product-image {
+    max-width: 80%; /* Increase the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* Center the image horizontally */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Optional: Add hover effect */
+.product-image:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    header, section {
+        padding: 10px; /* Reduce padding on smaller screens */
     }
 
-    // Proceed with form submission
-    const form = e.target;
-    const formData = new FormData(form);
+    .image-container {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
 
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyk9ih7wLXNJcWItquWeFxpQ5Bt3oqFaqp-fleyHOB1j-NaZWjl6MrFrGf8A1Pgteax/exec';
+/* Style the quantity input */
+#quantity {
+    width: 100px; /* Set a fixed width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
 
-    fetch(scriptURL, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.text())
-    .then(message => {
-        document.getElementById('success-message').style.display = 'block';
-        form.reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى.');
-    });
-});
+/* Optional: Add hover and focus effects */
+#quantity:hover {
+    border-color: #4CAF50;
+}
+
+#quantity:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
