@@ -20,8 +20,6 @@ section {
     flex-direction: column;
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    min-height: 100vh; /* Ensure the section takes up the full viewport height */
-    padding: 20px; /* Add some padding */
     box-sizing: border-box; /* Include padding in the height calculation */
 }
 
