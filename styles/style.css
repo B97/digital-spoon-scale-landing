@@ -250,3 +250,105 @@ button:hover, .whatsapp-button:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
+.price-container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.price-box {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #4CAF50;
+}
+
+.original-price {
+    color: #666;
+    font-size: 18px;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    color: #4CAF50;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.current-price span {
+    font-size: 40px;
+}
+
+.savings {
+    background-color: #ff4444;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.limited-offer {
+    color: #ff4444;
+    font-size: 20px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .price-container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .current-price {
+        font-size: 28px;
+    }
+
+    .current-price span {
+        font-size: 34px;
+    }
+}
+
+.order-now-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.order-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+    background-color: #45a049;
+}
+
+.order-now-btn:active {
+    transform: translateY(1px);
+}

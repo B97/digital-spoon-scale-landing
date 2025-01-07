@@ -51,3 +51,10 @@ function submitForm() {
             button.disabled = false;
         });
 }
+
+
+
+function scrollToForm() {
+    const orderForm = document.getElementById('order');
+    orderForm.scrollIntoView({ behavior: 'smooth' });
+}
