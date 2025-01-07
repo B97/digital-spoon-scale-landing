@@ -7,7 +7,7 @@ function submitForm() {
         quantity: form.quantity.value,
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbxc9l5mJYamyxxVg52-3o15v27woguKNKy0a_GtisbOk7lhUhAYUDSCLkAcyxCNL5yU/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxNTWNlQY3tuNCEGhk0jj-IZllFLYZZgkkyd3iIvEl-QGyroHk4b3pjFkt3JY1zKjo/exec", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
