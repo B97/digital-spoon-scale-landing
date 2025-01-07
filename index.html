@@ -37,7 +37,6 @@
     <p class="cod-message">
         <strong>الدفع نقدًا عند الاستلام فقط!</strong> لا داعي للدفع الآن، يمكنك الدفع عند استلام المنتج.
     </p>
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbyvMLwVpdz_xV3AlS2QJk09ssnfDKRAq9QPW19J7TtT1-sn2fl2r__Awbdbtcc2PzTa/exec">
         <label for="name">الاسم الكامل:</label>
         <input type="text" id="name" name="name" required>
 
@@ -50,7 +49,7 @@
         <label for="quantity">الكمية:</label>
         <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-        <button type="submit">تأكيد الطلب</button>
+    <button type="button" onclick="submitForm()">تأكيد الطلب</button>
     </form>
 </section>
 
